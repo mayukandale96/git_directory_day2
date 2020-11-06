@@ -1,0 +1,659 @@
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2
+$ git init
+Initialized empty Git repository in C:/Users/Mayuri/Desktop/Persistent/git_directory_day2/.git/
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git add file1.txt
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.txt
+
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git commit -m "wi1:new file created first time"
+[master (root-commit) 39d5b67] wi1:new file created first time
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git commit -m "wi1:some modificatios are done"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git commit -am "wi1:some modificatios are done"
+[master f9f8afa] wi1:some modificatios are done
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log
+commit f9f8afa4deaefd536330913dc07589a6f7073d0b (HEAD -> master)
+Author: Mayuri <mayurikandale2021@gmail.com>
+Date:   Fri Nov 6 10:31:34 2020 +0530
+
+    wi1:some modificatios are done
+
+commit 39d5b67ab4c1b58ae05191652e40cb9154f19e55
+Author: Mayuri <mayurikandale2021@gmail.com>
+Date:   Fri Nov 6 10:30:08 2020 +0530
+
+    wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log --oneline
+f9f8afa (HEAD -> master) wi1:some modificatios are done
+39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git branch
+* master
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git branch bug123
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git branch
+  bug123
+* master
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git checkout bug123
+Switched to branch 'bug123'
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (bug123)
+$ git branch
+* bug123
+  master
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (bug123)
+$ git status
+On branch bug123
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (bug123)
+$ git commit -am "bug123: file1 updated for change"
+[bug123 2aa79e3] bug123: file1 updated for change
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (bug123)
+$ git status
+On branch bug123
+nothing to commit, working tree clean
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (bug123)
+$ git log
+commit 2aa79e365708543255a39c1c986fbd8f7e4c928e (HEAD -> bug123)
+Author: Mayuri <mayurikandale2021@gmail.com>
+Date:   Fri Nov 6 11:17:51 2020 +0530
+
+    bug123: file1 updated for change
+
+commit f9f8afa4deaefd536330913dc07589a6f7073d0b (master)
+Author: Mayuri <mayurikandale2021@gmail.com>
+Date:   Fri Nov 6 10:31:34 2020 +0530
+
+    wi1:some modificatios are done
+
+commit 39d5b67ab4c1b58ae05191652e40cb9154f19e55
+Author: Mayuri <mayurikandale2021@gmail.com>
+Date:   Fri Nov 6 10:30:08 2020 +0530
+
+    wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (bug123)
+$ git log --oneline
+2aa79e3 (HEAD -> bug123) bug123: file1 updated for change
+f9f8afa (master) wi1:some modificatios are done
+39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (bug123)
+$ git checkout master
+Switched to branch 'master'
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log --oneline
+f9f8afa (HEAD -> master) wi1:some modificatios are done
+39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git merge bug123
+Updating f9f8afa..2aa79e3
+Fast-forward
+ file1.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log --oneline
+2aa79e3 (HEAD -> master, bug123) bug123: file1 updated for change
+f9f8afa wi1:some modificatios are done
+39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git branch -d bug123
+Deleted branch bug123 (was 2aa79e3).
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log --oneline
+2aa79e3 (HEAD -> master) bug123: file1 updated for change
+f9f8afa wi1:some modificatios are done
+39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git checkout -b bug1
+Switched to a new branch 'bug1'
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (bug1)
+$ git commit -am "bug2: changed doned "
+[bug1 5a62988] bug2: changed doned
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (bug1)
+$ git log --oneline
+5a62988 (HEAD -> bug1) bug2: changed doned
+2aa79e3 (master) bug123: file1 updated for change
+f9f8afa wi1:some modificatios are done
+39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (bug1)
+$ git checkout master
+Switched to branch 'master'
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log --oneline
+2aa79e3 (HEAD -> master) bug123: file1 updated for change
+f9f8afa wi1:some modificatios are done
+39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git commit -am "Wi4: file1 is updated change 3 on master by teammate"
+[master 1b3ce9d] Wi4: file1 is updated change 3 on master by teammate
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log --oneline
+1b3ce9d (HEAD -> master) Wi4: file1 is updated change 3 on master by teammate
+2aa79e3 bug123: file1 updated for change
+f9f8afa wi1:some modificatios are done
+39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git merge bug1
+Auto-merging file1.txt
+CONFLICT (content): Merge conflict in file1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master|MERGING)
+$ git commit -am "conflict resolved :file1 updated to "
+[master 58b0df5] conflict resolved :file1 updated to
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log --oneline
+58b0df5 (HEAD -> master) conflict resolved :file1 updated to
+1b3ce9d Wi4: file1 is updated change 3 on master by teammate
+5a62988 (bug1) bug2: changed doned
+2aa79e3 bug123: file1 updated for change
+f9f8afa wi1:some modificatios are done
+39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log --oneline --decorate
+58b0df5 (HEAD -> master) conflict resolved :file1 updated to
+1b3ce9d Wi4: file1 is updated change 3 on master by teammate
+5a62988 (bug1) bug2: changed doned
+2aa79e3 bug123: file1 updated for change
+f9f8afa wi1:some modificatios are done
+39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log --oneline --graph --decorate
+*   58b0df5 (HEAD -> master) conflict resolved :file1 updated to
+|\
+| * 5a62988 (bug1) bug2: changed doned
+* | 1b3ce9d Wi4: file1 is updated change 3 on master by teammate
+|/
+* 2aa79e3 bug123: file1 updated for change
+* f9f8afa wi1:some modificatios are done
+* 39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git branch -d bug1
+Deleted branch bug1 (was 5a62988).
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git checkout -b Enhancement1
+Switched to a new branch 'Enhancement1'
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git commit -am "Enhancsment1: file 1 updated for change 1"
+[Enhancement1 97f5c56] Enhancsment1: file 1 updated for change 1
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git log --oneline --graph --decorate
+* 97f5c56 (HEAD -> Enhancement1) Enhancsment1: file 1 updated for change 1
+*   58b0df5 (master) conflict resolved :file1 updated to
+|\
+| * 5a62988 bug2: changed doned
+* | 1b3ce9d Wi4: file1 is updated change 3 on master by teammate
+|/
+* 2aa79e3 bug123: file1 updated for change
+* f9f8afa wi1:some modificatios are done
+* 39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git checkout master
+Switched to branch 'master'
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log --oneline --graph --decorate
+*   58b0df5 (HEAD -> master) conflict resolved :file1 updated to
+|\
+| * 5a62988 bug2: changed doned
+* | 1b3ce9d Wi4: file1 is updated change 3 on master by teammate
+|/
+* 2aa79e3 bug123: file1 updated for change
+* f9f8afa wi1:some modificatios are done
+* 39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git commit -am "wi5: file1 updated by teammate for rebase"
+[master 20745f8] wi5: file1 updated by teammate for rebase
+ 1 file changed, 2 insertions(+)
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log --oneline --graph --decorate
+* 20745f8 (HEAD -> master) wi5: file1 updated by teammate for rebase
+*   58b0df5 conflict resolved :file1 updated to
+|\
+| * 5a62988 bug2: changed doned
+* | 1b3ce9d Wi4: file1 is updated change 3 on master by teammate
+|/
+* 2aa79e3 bug123: file1 updated for change
+* f9f8afa wi1:some modificatios are done
+* 39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git checkout bug2
+error: pathspec 'bug2' did not match any file(s) known to git
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git branch
+  Enhancement1
+* master
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git checkout Enhancement
+error: pathspec 'Enhancement' did not match any file(s) known to git
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git checkout Enhancement1
+Switched to branch 'Enhancement1'
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git log --oneline --graph --decorate
+* 97f5c56 (HEAD -> Enhancement1) Enhancsment1: file 1 updated for change 1
+*   58b0df5 conflict resolved :file1 updated to
+|\
+| * 5a62988 bug2: changed doned
+* | 1b3ce9d Wi4: file1 is updated change 3 on master by teammate
+|/
+* 2aa79e3 bug123: file1 updated for change
+* f9f8afa wi1:some modificatios are done
+* 39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git rebase master
+error: could not apply 97f5c56... Enhancsment1: file 1 updated for change 1
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 97f5c56... Enhancsment1: file 1 updated for change 1
+Auto-merging file1.txt
+CONFLICT (content): Merge conflict in file1.txt
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto 20745f8
+Last command done (1 command done):
+   pick 97f5c56 Enhancsment1: file 1 updated for change 1
+No commands remaining.
+You are currently rebasing branch 'Enhancement1' on '20745f8'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1|REBASE 1/1)
+$ git log --oneline --graph --decorate
+* 20745f8 (HEAD, master) wi5: file1 updated by teammate for rebase
+*   58b0df5 conflict resolved :file1 updated to
+|\
+| * 5a62988 bug2: changed doned
+* | 1b3ce9d Wi4: file1 is updated change 3 on master by teammate
+|/
+* 2aa79e3 bug123: file1 updated for change
+* f9f8afa wi1:some modificatios are done
+* 39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto 20745f8
+Last command done (1 command done):
+   pick 97f5c56 Enhancsment1: file 1 updated for change 1
+No commands remaining.
+You are currently rebasing branch 'Enhancement1' on '20745f8'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1|REBASE 1/1)
+$ git add .
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto 20745f8
+Last command done (1 command done):
+   pick 97f5c56 Enhancsment1: file 1 updated for change 1
+No commands remaining.
+You are currently rebasing branch 'Enhancement1' on '20745f8'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file1.txt
+
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1|REBASE 1/1)
+$ git rebase --continue
+hint: Waiting for your editor to close the file... error: cannot spawn notepad++: No such file or directory
+error: unable to start editor 'notepad++'
+Please supply the message using either -m or -F option.
+error: could not commit staged changes.
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1|REBASE 1/1)
+$ git commit -m "wi6: teamate change for rebase"
+[detached HEAD 13bab75] wi6: teamate change for rebase
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1|REBASE 1/1)
+$ git rebase --continue
+Successfully rebased and updated refs/heads/Enhancement1.
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git log --oneline --graph --decorate
+* 13bab75 (HEAD -> Enhancement1) wi6: teamate change for rebase
+* 20745f8 (master) wi5: file1 updated by teammate for rebase
+*   58b0df5 conflict resolved :file1 updated to
+|\
+| * 5a62988 bug2: changed doned
+* | 1b3ce9d Wi4: file1 is updated change 3 on master by teammate
+|/
+* 2aa79e3 bug123: file1 updated for change
+* f9f8afa wi1:some modificatios are done
+* 39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git merge Enhancement1
+Already up to date.
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git checkout master
+Switched to branch 'master'
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git merge Enhancement1
+Updating 20745f8..13bab75
+Fast-forward
+ file1.txt | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log --oneline --graph --decorate
+* 13bab75 (HEAD -> master, Enhancement1) wi6: teamate change for rebase
+* 20745f8 wi5: file1 updated by teammate for rebase
+*   58b0df5 conflict resolved :file1 updated to
+|\
+| * 5a62988 bug2: changed doned
+* | 1b3ce9d Wi4: file1 is updated change 3 on master by teammate
+|/
+* 2aa79e3 bug123: file1 updated for change
+* f9f8afa wi1:some modificatios are done
+* 39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git checkout bug2
+error: pathspec 'bug2' did not match any file(s) known to git
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git checkout Enhancement1
+Switched to branch 'Enhancement1'
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git status
+On branch Enhancement1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git add file2.txt
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git status
+On branch Enhancement1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file2.txt
+
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git checkout master
+Switched to branch 'master'
+M       file1.txt
+A       file2.txt
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git checkout Enhancement1
+Switched to branch 'Enhancement1'
+M       file1.txt
+A       file2.txt
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git checkout master
+Switched to branch 'master'
+M       file1.txt
+A       file2.txt
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git stash save stash1
+Saved working directory and index state On master: stash1
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git stash list
+stash@{0}: On master: stash1
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git checkout Enhancement1
+Switched to branch 'Enhancement1'
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (Enhancement1)
+$ git checkout master
+Switched to branch 'master'
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git stash pop
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file2.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+Dropped refs/stash@{0} (b5fb806cdfc4188727ce564b6fa1ac553ae629ae)
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git commit -am "wi7: file is commited"
+[master b394778] wi7: file is commited
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+ create mode 100644 file2.txt
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$ git log --oneline --graph --decorate
+* b394778 (HEAD -> master) wi7: file is commited
+* 13bab75 (Enhancement1) wi6: teamate change for rebase
+* 20745f8 wi5: file1 updated by teammate for rebase
+*   58b0df5 conflict resolved :file1 updated to
+|\
+| * 5a62988 bug2: changed doned
+* | 1b3ce9d Wi4: file1 is updated change 3 on master by teammate
+|/
+* 2aa79e3 bug123: file1 updated for change
+* f9f8afa wi1:some modificatios are done
+* 39d5b67 wi1:new file created first time
+
+Mayuri@LAPTOP-L8J0O4GU MINGW64 ~/Desktop/Persistent/git_directory_day2 (master)
+$
