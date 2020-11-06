@@ -4,3 +4,7 @@ this file is for reference.
 some modifications
 
 defect is being fixed
+
+need to fix bug 2
+
+and done
