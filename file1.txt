@@ -6,3 +6,7 @@ some modifications
 defect is being fixed
 
 change 3 - by change teammate for his work itrm
+
+need to fix bug 2
+
+and done
